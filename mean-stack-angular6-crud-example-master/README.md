@@ -6,8 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## To Run this project
 
 Install the latest stable version of Angular and run the following commands:
-1. npm install (if some dependencies are missing add them)
-2. npm start
+1. `npm install` (if some dependencies are missing add them)
+2. `npm start`
 
 
 ## Development server
