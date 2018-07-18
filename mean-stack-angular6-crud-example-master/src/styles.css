@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+body { 
+    color: whitesmoke;
+    margin:25px;
+    width: 50%;
+    margin-left:350px;
+   }
+
+   .img
+   {
+       background-image: url('assets/img4.jpg');
+       background-repeat: none;
+       background-size: 100%;
+      
+   }

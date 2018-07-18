@@ -1,0 +1,50 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" (click)="hotelDetails()"><mat-icon>show</mat-icon></a>
+</div>
+<form [formGroup]="hotelForm" (ngSubmit)="onFormSubmit(hotelForm.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Hotel Id" formControlName="hotelId"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!hotelForm.get('hotelId').valid && hotelForm.get('hotelId').touched">Please enter hotelId</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder=" Hotel Name" formControlName="hotelName"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!hotelForm.get('hotelName').valid && hotelForm.get('hotelName').touched">Please enter hotel hotelName</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="City" formControlName="city"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!hotelForm.get('city').valid && hotelForm.get('city').touched">Please enter hotel city</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Description" formControlName="description"
+           [errorStateMatcher]="matcher"></textarea>
+    <mat-error>
+      <span *ngIf="!hotelForm.get('description').valid && hotelForm.get('description').touched">Please enter hotel Description</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder=" Hotel Address" formControlName="hotelAddress"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!hotelForm.get('hotelAddress').valid && hotelForm.get('hotelAddress').touched">Please enter hotelAddress</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Contact" formControlName="contact"
+           [errorStateMatcher]="matcher" pattern="[7-9]{1}[0-9]{9}" minlength="10">
+    <mat-error>
+      <span *ngIf="!hotelForm.get('contact').valid && hotelForm.get('contact').touched">Please enter a Valid Number</span>
+    </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!hotelForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+  </div>
+</form>

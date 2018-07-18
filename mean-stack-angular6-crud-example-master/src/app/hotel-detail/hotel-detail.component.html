@@ -1,0 +1,27 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/hotels']"><mat-icon>list</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>{{hotel.title}}</h2></mat-card-title>
+    <mat-card-subtitle>{{hotel.description}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>Hotel Id:</dt>
+      <dd>{{hotel.hotelId}}</dd>
+      <dt>Hotel Name:</dt>
+      <dd>{{hotel.hotelName}}</dd>
+      <dt>City:</dt>
+      <dd>{{hotel.city}}</dd>
+      <dt>Description:</dt>
+      <dd>{{hotel.description}}</dd>
+      <dt>Update Date:</dt>
+      <dd>{{hotel.updated_date | date}}</dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/hotel-edit', hotel._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deleteHotel(hotel._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>
