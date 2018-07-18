@@ -15,3 +15,13 @@
 .button-row {
   margin: 10px 0;
 }
+.formbox
+{
+  padding: 10px;
+  border: none;
+  background-color:white;
+  color:blue;
+  
+  box-shadow: 8px 10px 1px black;
+
+}

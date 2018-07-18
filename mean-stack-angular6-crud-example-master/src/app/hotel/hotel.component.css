@@ -4,6 +4,9 @@
   max-height: 500px;
   min-width: 300px;
   overflow: auto;
+  color:blue;
+  background-color:white;
+  box-shadow: 8px 10px 1px black;
 }
 
 .isbn-col {
@@ -15,3 +18,5 @@
   margin: 10px 0;
   
 }
+
+

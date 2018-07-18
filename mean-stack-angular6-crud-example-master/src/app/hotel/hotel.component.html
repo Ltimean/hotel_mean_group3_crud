@@ -2,6 +2,7 @@
   <h1>Add Your Hotels Here</h1>
   <a mat-raised-button color="primary" [routerLink]="['/hotel-create']"><mat-icon>add</mat-icon></a>
 </div>
+
 <div class="example-container mat-elevation-z8">
   <table mat-table #table [dataSource]="dataSource">
 
@@ -30,3 +31,4 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/hotel-details/', row._id]"></tr>
   </table>
 </div>
+
