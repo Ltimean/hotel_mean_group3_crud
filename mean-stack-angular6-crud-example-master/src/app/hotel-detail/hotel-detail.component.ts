@@ -28,6 +28,7 @@ export class HotelDetailComponent implements OnInit {
   deleteHotel(id) {
     this.api.deleteHotel(id)
       .subscribe(res => {
+        alert("confirm Deleting");
           this.router.navigate(['/hotels']);
         }, (err) => {
           console.log(err);
